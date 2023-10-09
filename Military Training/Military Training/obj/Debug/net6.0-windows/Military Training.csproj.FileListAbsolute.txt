@@ -1,0 +1,17 @@
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\bin\Debug\net6.0-windows\Military Training.exe
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\bin\Debug\net6.0-windows\Military Training.deps.json
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\bin\Debug\net6.0-windows\Military Training.runtimeconfig.json
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\bin\Debug\net6.0-windows\Military Training.dll
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\bin\Debug\net6.0-windows\Military Training.pdb
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.csproj.AssemblyReference.cache
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military_Training.Board Design.resources
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.csproj.GenerateResource.cache
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.AssemblyInfoInputs.cache
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.AssemblyInfo.cs
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.csproj.CoreCompileInputs.cache
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.dll
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\refint\Military Training.dll
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.pdb
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\Military Training.genruntimeconfig.cache
+D:\Projects\Minesweeper military\Code\Military Training\Military Training\obj\Debug\net6.0-windows\ref\Military Training.dll
