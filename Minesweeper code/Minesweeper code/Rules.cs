@@ -16,7 +16,7 @@ namespace Minesweeper_code
             newform.ShowDialog();
             this.Show();
         }
-
+        //osgbisebg
         private void button2_Click(object sender, EventArgs e)
         {
             const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:/Projects/Minesweeper military/Minesweeper code.accdb";
