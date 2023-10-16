@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NGhVdSYgP9dD0PQDzbSx23zro9/I5A5mYmt5qN1o7u5dRf2nZOlVXSSpiekYu1KRn4WAuhyRVEa9wAuL1XJGjA==",
+  "dgSpecHash": "b71ZTPPkPayfy9/bZOWZoQY82CeY0fSvZbkuC9GxLaqd0C5Lox3XV8cchDueuaNjnqLwXARvMY95aHPb0QyMSg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+  "projectFilePath": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin4\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaachain\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\isaachain\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
