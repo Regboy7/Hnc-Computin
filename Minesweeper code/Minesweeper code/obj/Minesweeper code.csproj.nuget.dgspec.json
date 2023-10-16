@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {}
+    "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {
+    "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+        "projectUniqueName": "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
         "projectName": "Minesweeper code",
-        "projectPath": "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+        "projectPath": "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
         "packagesPath": "C:\\Users\\isaachain\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\obj\\",
+        "outputPath": "D:\\Projects\\Minesweeper military\\HNC repo\\Minesweeper code\\Minesweeper code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

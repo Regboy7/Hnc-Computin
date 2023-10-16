@@ -19,7 +19,7 @@ namespace Minesweeper_code
             InitializeComponent();
         }
 
-
+        //owiefnwoefnweofwieofwneofefsefsefsefsefdsfsefsef
         private void Button1_Click(object sender, EventArgs e)
         {
             List<string> UsernamesExisting = new List<string>();
@@ -44,7 +44,7 @@ namespace Minesweeper_code
             if (textBox2.Text.Length < 3) { MessageBox.Show("Password must be more than 3 characters"); return; }
             if (!(textBox2.Text == textBox3.Text)) { MessageBox.Show("Passwords do not match"); return; }
 
-            var query = "INSERT INTO USERS([Username], [Password])VALUES( @Username, @Password)";
+            var query = "INSERT INTO Scoreboard([Username], [Password])VALUES( @Username, @Password)";
             OleDbCommand cmd = new OleDbCommand(query, Con);
             string HashedPass = Hasher.Hash(textBox2.Text, 15);
             cmd.Parameters.AddWithValue("@Username", textBox1.Text); // can also you the text in the textbox - e.g. textbox1.Text

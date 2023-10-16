@@ -16,3 +16,37 @@ M:\Projects\Minesweeper military\Military Training\Minesweeper code\Minesweeper 
 M:\Projects\Minesweeper military\Military Training\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.pdb
 M:\Projects\Minesweeper military\Military Training\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.genruntimeconfig.cache
 M:\Projects\Minesweeper military\Military Training\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\ref\Minesweeper code.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Minesweeper code.exe
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Minesweeper code.deps.json
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Minesweeper code.runtimeconfig.json
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Minesweeper code.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Minesweeper code.pdb
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Security.Permissions.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\System.Windows.Extensions.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.AssemblyReference.cache
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.CreateAccount.resources
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.MinesweeperGame.resources
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.Rules.resources
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.GenerateResource.cache
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.AssemblyInfoInputs.cache
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.AssemblyInfo.cs
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.CoreCompileInputs.cache
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.CopyComplete
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\refint\Minesweeper code.dll
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.pdb
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.genruntimeconfig.cache
+D:\Projects\Minesweeper military\HNC repo\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\ref\Minesweeper code.dll
