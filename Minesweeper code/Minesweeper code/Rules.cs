@@ -19,7 +19,7 @@ namespace Minesweeper_code
         //osgbisebg
         private void button2_Click(object sender, EventArgs e)
         {
-            const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:/Projects/Minesweeper military/Minesweeper code.accdb";
+            const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb";
 
             List<string> retrievedP1PasswordResults = new List<string>();
             string CheckP1HashPass = Hasher.Hash(textBox2.Text, 15);

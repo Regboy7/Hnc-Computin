@@ -18,10 +18,13 @@ namespace Minesweeper_code
         {
             InitializeComponent();
         }
-        private void Button1_Click(object sender, EventArgs e)
+        
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
+
             List<string> UsernamesExisting = new List<string>();
-            OleDbConnection Con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:/Projects/Minesweeper military/Minesweeper code.accdb");
+            OleDbConnection Con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb");
 
             Con.Open();
             UsernamesExisting = DatabaseCon.Datalist("Username", "Scoreboard");
