@@ -84,7 +84,7 @@
             textBox1.Location = new Point(122, 353);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -93,7 +93,7 @@
             textBox2.Location = new Point(122, 393);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
@@ -102,7 +102,7 @@
             textBox3.Location = new Point(347, 353);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
@@ -111,7 +111,7 @@
             textBox4.Location = new Point(347, 393);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 6;
+            textBox4.TabIndex = 4;
             // 
             // label4
             // 
@@ -159,7 +159,7 @@
             button1.Location = new Point(465, 353);
             button1.Name = "button1";
             button1.Size = new Size(108, 63);
-            button1.TabIndex = 11;
+            button1.TabIndex = 5;
             button1.Text = "Create account";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -170,7 +170,7 @@
             button2.Location = new Point(595, 353);
             button2.Name = "button2";
             button2.Size = new Size(102, 63);
-            button2.TabIndex = 12;
+            button2.TabIndex = 6;
             button2.Text = "Play Game";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;

@@ -18,8 +18,6 @@ namespace Minesweeper_code
         {
             InitializeComponent();
         }
-
-        //owiefnwoefnweofwieofwneofefsefsefsefsefdsfsefsefsefsefsefsefsefsefsefsefsefsefsedfwsefwrgdfdfgrdg
         private void Button1_Click(object sender, EventArgs e)
         {
             List<string> UsernamesExisting = new List<string>();
