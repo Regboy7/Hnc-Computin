@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "My3FF/z6SEw70M2XfisfI/V9xfe4T4+827Z8wAF41JZOIy/XVUCW4GWctooUY59LQJVS84bApk3624igT64+0w==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Minesweeper military\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\isaachain\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.data.oledb\\7.0.0\\system.data.oledb.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.diagnostics.performancecounter\\7.0.0\\system.diagnostics.performancecounter.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaachain\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
