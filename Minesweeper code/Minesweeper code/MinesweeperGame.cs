@@ -41,5 +41,13 @@ namespace Minesweeper_code
         {
             MessageBox.Show(P1User, P2User);
         }
+
+        private void MinesweeperGame_Load(object sender, EventArgs e)
+        {
+            label1.Text = P1User;
+            label2.Text = P2User;
+            label3.Text = P1User + "has cleared 0 tiles";
+            label4.Text = P2User + "has cleared 0 tiles";
+        }
     }
 }
