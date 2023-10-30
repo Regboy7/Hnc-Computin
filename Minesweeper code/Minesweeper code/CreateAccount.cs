@@ -28,12 +28,12 @@ namespace Minesweeper_code
 
             Con.Open();
             UsernamesExisting = DatabaseCon.Datalist("Username", "Scoreboard");
-            if (Regex.IsMatch(textBox1.Text, @"^[a-zA-Z0-9\s.\?\,\'\;\:\!\-]+$"))
+            if (Regex.IsMatch(textBox1.Text, @"^.\?\,\'\;\:\!\-]+$"))
             {
                 MessageBox.Show("Special characters are not allowed");
                 return;
             }
-            if (Regex.IsMatch(textBox2.Text, @"^[a-zA-Z0-9\s.\?\,\'\;\:\!\-]+$"))
+            if (Regex.IsMatch(textBox2.Text, @"^.\?\,\'\;\:\!\-]+$"))
             {
                 MessageBox.Show("Special characters are not allowed");
                 return;

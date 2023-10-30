@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,14 +14,25 @@ namespace Minesweeper_code
 {
     public partial class MinesweeperGame : Form
     {
+        public string p1ID;
+        public string p2ID;
+        public string P1User;
+        public string P2User;
+
         public MinesweeperGame(int P1UID, int P2UID)
         {
+
             InitializeComponent();
-            string p1ID = Convert.ToString(P1UID);
-            string p2ID = Convert.ToString(P2UID);
-            string P1User = DatabaseCon.Datalist("Username", "Scoreboard", p1ID);
-            string P2User = DatabaseCon.Datalist("Username", "Scoreboard", p2ID);
-            MessageBox.Show(P2User + P1User);
+            this.p1ID = P1UID.ToString();
+            this.p2ID = P2UID.ToString();
+            this.P1User = DatabaseCon.Datalist("Username", "Scoreboard", p1ID);
+            this.P2User = DatabaseCon.Datalist("Username", "Scoreboard", p2ID);
+
+        }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(P1User, P2User);
         }
     }
 }

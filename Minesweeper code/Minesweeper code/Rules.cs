@@ -54,7 +54,8 @@ namespace Minesweeper_code
 
             if (retrievedP2PasswordResults.Contains(CheckP2HashPass) && retrievedP1PasswordResults.Contains(CheckP1HashPass))
             {
-                MinesweeperGame newform = new MinesweeperGame(int.Parse(P1UID[0]), int.Parse(P2UID[0]));
+                MessageBox.Show(P1UID[0], P2UID[0]);
+                MinesweeperGame newform = new MinesweeperGame(Convert.ToInt32(P1UID[0]), Convert.ToInt32(P2UID[0]));
                 this.Hide();
                 newform.ShowDialog();
                 this.Close();
