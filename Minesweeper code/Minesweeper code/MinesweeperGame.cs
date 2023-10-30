@@ -27,7 +27,14 @@ namespace Minesweeper_code
             this.p2ID = P2UID.ToString();
             this.P1User = DatabaseCon.Datalist("Username", "Scoreboard", p1ID);
             this.P2User = DatabaseCon.Datalist("Username", "Scoreboard", p2ID);
-
+            tableLayoutPanel1.ColumnStyles.Clear();
+            tableLayoutPanel1.RowStyles.Clear();
+            for (int i = 0; i < 3; i++)
+            {
+                tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F))
+            }
+;
         }
 
         public void button1_Click(object sender, EventArgs e)

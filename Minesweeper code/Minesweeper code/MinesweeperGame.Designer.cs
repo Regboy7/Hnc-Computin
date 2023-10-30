@@ -84,7 +84,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 10;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
@@ -96,7 +96,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Location = new Point(12, 77);
+            tableLayoutPanel1.ForeColor = Color.FromArgb(170, 56, 30);
+            tableLayoutPanel1.Location = new Point(28, 96);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -109,7 +110,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(198, 140);
+            tableLayoutPanel1.Size = new Size(242, 202);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // MinesweeperGame
@@ -118,15 +119,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(97, 94, 62);
             ClientSize = new Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Player2);
             Controls.Add(P1sab);
+            Controls.Add(tableLayoutPanel1);
             Name = "MinesweeperGame";
             Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
