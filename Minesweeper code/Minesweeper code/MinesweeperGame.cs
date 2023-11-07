@@ -121,10 +121,16 @@ namespace Minesweeper_code
                     pictureBox3.SendToBack();
                     PlayerTurn(P1, i1);
                     i1++;
+                    if (i1 % 3 == 0)
+                    {
+                        MilQuestion();
+                    }
                 }
                 else
                 {
                     pictureBox1.SendToBack();
+                    PlayerTurn(P2, i2);
+                    i2++;
                 }
             }
         }
@@ -132,14 +138,17 @@ namespace Minesweeper_code
         {
             
         }
+        public bool MilQuestion()
+        {
+            String[] Questions = { "What is the official name of the UK's Army, Navy, and Air Force?", "What is the highest rank in the British Army?", "What is the largest and most powerful warship in the Royal Navy's fleet?", "What is the British Army's elite special forces unit known as?", "Which conflict is often referred to as the Falklands War?", " in which the UK fought against Argentina?", "What is the British Army's primary battle tank?", "In which year did the Royal Air Force (RAF) become an independent branch of the UK's armed forces?", "What is the UK's nuclear deterrent system called, which consists of Trident II D5 ballistic missiles?", "What is the highest military award that can be bestowed upon a member of the British Armed Forces for acts of conspicuous gallantry and valor in the face of the enemy?", "What is the Royal Navy's nuclear-powered ballistic missile submarine class that carries the Trident II D5 missile system?" };
+            String[] Answers = { "The British Army, the Royal Navy, and the Royal Air Force.", "Field Marshal.", "The HMS Queen Elizabeth, an aircraft carrier.", The SAS (Special Air Service).\r\n\r\nThe Falklands War took place in 1982.\r\n\r\nThe Challenger 2.\r\n\r\nThe Royal Air Force was founded on April 1, 1918.\r\n\r\nTrident, also known as the Trident nuclear program.\r\n\r\nThe Victoria Cross (VC).\r\n\r\nVanguard-class submarines." };
+        }
 
     }
     class CellData
     {
         public int Row { get; }
-        public int Column { get; }
-
-        public CellData(int row, int column)
+        public int Column { get; }" , "        public CellData(int row, int column)
         {
             Row = row;
             Column = column;
