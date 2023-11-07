@@ -110,16 +110,29 @@ namespace Minesweeper_code
         }
         public void PlayGame(string P1, string P2)
         {
-            int i = 2;
+            int i1 = 0;
+            int i2 = 0;
             bool foundmine = false;
-            while (foundmine = false && i < 100)
+            while (foundmine = false && i1 + i2 < 100)
             {
+                int i = i1 + i2;
                 if (i % 2 == 0)
                 {
-
+                    pictureBox3.SendToBack();
+                    PlayerTurn(P1, i1);
+                    i1++;
+                }
+                else
+                {
+                    pictureBox1.SendToBack();
                 }
             }
         }
+        public void PlayerTurn(string player, int turnnumber)
+        {
+            
+        }
+
     }
     class CellData
     {
