@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinesweeperGame));
             P1sab = new Button();
             Player2 = new Button();
-            player1ScoreLabel = new Label();
-            label2 = new Label();
+            P1Name = new Label();
+            P2Name = new Label();
             player1TableLayoutPanel = new TableLayoutPanel();
             player2TableLayoutPanel = new TableLayoutPanel();
-            label3 = new Label();
-            label4 = new Label();
+            player1ScoreLabel = new Label();
+            player2ScoreLabel = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -75,29 +75,29 @@
             Player2.Text = "Player 2 Sabotage";
             Player2.UseVisualStyleBackColor = false;
             // 
-            // player1ScoreLabel
+            // P1Name
             // 
-            player1ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
-            player1ScoreLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            player1ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
-            player1ScoreLabel.Location = new Point(28, 25);
-            player1ScoreLabel.MaximumSize = new Size(1000, 1000);
-            player1ScoreLabel.Name = "player1ScoreLabel";
-            player1ScoreLabel.Size = new Size(74, 37);
-            player1ScoreLabel.TabIndex = 2;
-            player1ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
+            P1Name.BackColor = Color.FromArgb(170, 56, 30);
+            P1Name.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            P1Name.ForeColor = SystemColors.ButtonHighlight;
+            P1Name.Location = new Point(28, 25);
+            P1Name.MaximumSize = new Size(1000, 1000);
+            P1Name.Name = "P1Name";
+            P1Name.Size = new Size(74, 37);
+            P1Name.TabIndex = 2;
+            P1Name.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // P2Name
             // 
-            label2.BackColor = Color.FromArgb(170, 56, 30);
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(451, 25);
-            label2.MaximumSize = new Size(1000, 1000);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 37);
-            label2.TabIndex = 3;
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            P2Name.BackColor = Color.FromArgb(170, 56, 30);
+            P2Name.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            P2Name.ForeColor = SystemColors.ButtonHighlight;
+            P2Name.Location = new Point(451, 25);
+            P2Name.MaximumSize = new Size(1000, 1000);
+            P2Name.Name = "P2Name";
+            P2Name.Size = new Size(74, 37);
+            P2Name.TabIndex = 3;
+            P2Name.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // player1TableLayoutPanel
             // 
@@ -161,25 +161,25 @@
             player2TableLayoutPanel.Size = new Size(310, 234);
             player2TableLayoutPanel.TabIndex = 5;
             // 
-            // label3
+            // player1ScoreLabel
             // 
-            label3.BackColor = Color.FromArgb(170, 56, 30);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(28, 335);
-            label3.Name = "label3";
-            label3.Size = new Size(220, 32);
-            label3.TabIndex = 6;
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            player1ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
+            player1ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
+            player1ScoreLabel.Location = new Point(28, 335);
+            player1ScoreLabel.Name = "player1ScoreLabel";
+            player1ScoreLabel.Size = new Size(220, 32);
+            player1ScoreLabel.TabIndex = 6;
+            player1ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // player2ScoreLabel
             // 
-            label4.BackColor = Color.FromArgb(170, 56, 30);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(451, 335);
-            label4.Name = "label4";
-            label4.Size = new Size(235, 32);
-            label4.TabIndex = 7;
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            player2ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
+            player2ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
+            player2ScoreLabel.Location = new Point(451, 335);
+            player2ScoreLabel.Name = "player2ScoreLabel";
+            player2ScoreLabel.Size = new Size(235, 32);
+            player2ScoreLabel.TabIndex = 7;
+            player2ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -295,11 +295,11 @@
             Controls.Add(label5);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(player2TableLayoutPanel);
-            Controls.Add(label2);
+            Controls.Add(player2ScoreLabel);
             Controls.Add(player1ScoreLabel);
+            Controls.Add(player2TableLayoutPanel);
+            Controls.Add(P2Name);
+            Controls.Add(P1Name);
             Controls.Add(Player2);
             Controls.Add(P1sab);
             Controls.Add(player1TableLayoutPanel);
@@ -321,12 +321,12 @@
 
         private Button P1sab;
         private Button Player2;
-        private Label player1ScoreLabel;
-        private Label label2;
+        private Label P1Name;
+        private Label P2Name;
         private TableLayoutPanel player1TableLayoutPanel;
         private TableLayoutPanel player2TableLayoutPanel;
-        private Label label3;
-        private Label label4;
+        private Label player1ScoreLabel;
+        private Label player2ScoreLabel;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

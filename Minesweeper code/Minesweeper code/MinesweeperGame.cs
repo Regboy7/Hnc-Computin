@@ -28,27 +28,29 @@ namespace Minesweeper_code
         private int player2Score = 0;
         private int turnCounter = 0;
         private List<string> questions = new List<string>
-                                    { "What is the official name of the UK's Army, Navy, and Air Force?",
-                                    "What is the highest rank in the British Army?",
-                                    "What is the largest and most powerful warship in the Royal Navy's fleet?",
-                                    "What is the British Army's elite special forces unit known as?",
-                                    "Which conflict is often referred to as the Falklands War?",
-                                    " in which the UK fought against Argentina?",
-                                    "What is the British Army's primary battle tank?",
-                                    "In which year did the Royal Air Force (RAF) become an independent branch of the UK's armed forces?",
-                                    "What is the UK's nuclear deterrent system called, which consists of Trident II D5 ballistic missiles?",
-                                    "What is the highest military award that can be bestowed upon a member of the British Armed Forces for acts of conspicuous gallantry and valor in the face of the enemy?",
-                                    "What is the Royal Navy's nuclear-powered ballistic missile submarine class that carries the Trident II D5 missile system?" };
-        public String[] Answers = { "The British Army, the Royal Navy, and the Royal Air Force.",
-                                    "Field Marshal.",
-                                    "The HMS Queen Elizabeth, an aircraft carrier.",
-                                    "The SAS (Special Air Service)",
-                                    "The Falklands War took place in 1982.",
-                                    "The Challenger 2.",
-                                    "1918.",
-                                    "Trident, also known as the Trident nuclear program.",
-                                    "The Victoria Cross (VC).",
-                                    "Vanguard-class submarines." };
+                                    { "Is the British Army the only branch of the British Armed Forces?",
+                                      "Does the Royal Navy focus solely on submarine operations?",
+                                      "Is the Royal Air Force primarily responsible for ground-based operations?",
+                                      "Did the British military stay completely neutral during World War I?",
+                                      "Is the Prime Minister the operational commander of the British Armed Forces?",
+                                      "Does the British military exclusively engage in combat operations?",
+                                      "Is the Ministry of Defence solely responsible for domestic affairs?",
+                                      "Are members of the British military prohibited from participating in civilian rescue efforts?",
+                                      "Is the Gurkha Brigade an independent military force unrelated to the British Army?",
+                                      "Does the British military have no presence outside the United Kingdom?" };
+        public List<string> Answers = new List<string>
+        { 
+            "No"
+            "No"
+            "No"
+            "No"
+            "No"
+            "No"
+            "No"
+            "No"
+            "No" 
+            "No" 
+        };
         public string p1ID;
         public string p2ID;
         public string P1User;
@@ -161,7 +163,7 @@ namespace Minesweeper_code
         private void AskQuestion()
         {
             // Display a random question from the array
-            string question = GetRandomQuestion();
+            string question = GetRandomQuestionAndAnswer();
             DialogResult result = MessageBox.Show(question, "Question", MessageBoxButtons.YesNo);
 
             // If the answer is correct, give the player an extra turn
@@ -183,7 +185,7 @@ namespace Minesweeper_code
         private void DisplayPlayerScores()
         {
             // Display player scores in the UI
-            player1ScoreLabel.Text = $"Player 1 Score: {player1Score}";
+            P1Name.Text = $"Player 1 Score: {player1Score}";
             player2ScoreLabel.Text = $"Player 2 Score: {player2Score}";
         }
         private void SwitchTurns()
@@ -200,11 +202,13 @@ namespace Minesweeper_code
                 player2TableLayoutPanel.Enabled = true;
             }
         }
-        private string GetRandomQuestion()
+        private string GetRandomQuestionAndAnswer()
         {
             Random random = new Random();
-            int index = random.Next(questions.Count);
-            return questions[index];
+            int index1 = random.Next(questions.Count);
+
+            return questions[index1];
+            return Answers[index1];
         }
 
         private int CountAdjacentMines(int row, int col)
@@ -238,10 +242,10 @@ namespace Minesweeper_code
 
         private void MinesweeperGame_Load(object sender, EventArgs e)
         {
-            player1ScoreLabel.Text = P1User;
-            label2.Text = P2User;
-            label3.Text = P1User + "has cleared 0 tiles";
-            label4.Text = P2User + "has cleared 0 tiles";
+            P1Name.Text = P1User;
+            P2Name.Text = P2User;
+            player1ScoreLabel.Text = P1User + "has cleared 0 tiles";
+            player2ScoreLabel.Text = P2User + "has cleared 0 tiles";
         }
 
     }
@@ -260,4 +264,4 @@ class CellData
         Column = column;
     }
 }
-}
+
