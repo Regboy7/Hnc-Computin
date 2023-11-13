@@ -186,3 +186,13 @@ C:\Users\isaachain\Source\Repos\Hnc-Computin0\Minesweeper code\Minesweeper code\
 C:\Users\isaachain\Source\Repos\Hnc-Computin0\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.pdb
 C:\Users\isaachain\Source\Repos\Hnc-Computin0\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.genruntimeconfig.cache
 C:\Users\isaachain\Source\Repos\Hnc-Computin0\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\ref\Minesweeper code.dll
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.AssemblyReference.cache
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.CreateAccount.resources
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.MinesweeperGame.resources
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.Properties.Resources.resources
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper_code.Rules.resources
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.GenerateResource.cache
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.AssemblyInfoInputs.cache
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.AssemblyInfo.cs
+C:\Users\isaachain\Source\Repos\Hnc-Computin14\Minesweeper code\Minesweeper code\obj\Debug\net6.0-windows\Minesweeper code.csproj.CoreCompileInputs.cache

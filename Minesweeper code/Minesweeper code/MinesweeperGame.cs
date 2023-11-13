@@ -238,7 +238,7 @@ namespace Minesweeper_code
 
         private void MinesweeperGame_Load(object sender, EventArgs e)
         {
-            label1.Text = P1User;
+            player1ScoreLabel.Text = P1User;
             label2.Text = P2User;
             label3.Text = P1User + "has cleared 0 tiles";
             label4.Text = P2User + "has cleared 0 tiles";
@@ -250,14 +250,14 @@ namespace Minesweeper_code
 
 }
 
-    class CellData
+class CellData
+{
+    public int Row { get; }
+    public int Column { get; }
+    public CellData(int row, int column)
     {
-        public int Row { get; }
-        public int Column { get; }
-        public CellData(int row, int column)
-        {
-            Row = row;
-            Column = column;
-        }
+        Row = row;
+        Column = column;
     }
+}
 }

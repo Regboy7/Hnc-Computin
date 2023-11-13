@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinesweeperGame));
             P1sab = new Button();
             Player2 = new Button();
-            label1 = new Label();
+            player1ScoreLabel = new Label();
             label2 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
+            player1TableLayoutPanel = new TableLayoutPanel();
+            player2TableLayoutPanel = new TableLayoutPanel();
             label3 = new Label();
             label4 = new Label();
             pictureBox1 = new PictureBox();
@@ -75,17 +75,17 @@
             Player2.Text = "Player 2 Sabotage";
             Player2.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // player1ScoreLabel
             // 
-            label1.BackColor = Color.FromArgb(170, 56, 30);
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(28, 25);
-            label1.MaximumSize = new Size(1000, 1000);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 37);
-            label1.TabIndex = 2;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            player1ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
+            player1ScoreLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            player1ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
+            player1ScoreLabel.Location = new Point(28, 25);
+            player1ScoreLabel.MaximumSize = new Size(1000, 1000);
+            player1ScoreLabel.Name = "player1ScoreLabel";
+            player1ScoreLabel.Size = new Size(74, 37);
+            player1ScoreLabel.TabIndex = 2;
+            player1ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -99,67 +99,67 @@
             label2.TabIndex = 3;
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
+            // player1TableLayoutPanel
             // 
-            tableLayoutPanel1.BackColor = Color.White;
-            tableLayoutPanel1.ColumnCount = 10;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ForeColor = Color.FromArgb(170, 56, 30);
-            tableLayoutPanel1.Location = new Point(28, 80);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 10;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(306, 234);
-            tableLayoutPanel1.TabIndex = 4;
+            player1TableLayoutPanel.BackColor = Color.White;
+            player1TableLayoutPanel.ColumnCount = 10;
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.ForeColor = Color.FromArgb(170, 56, 30);
+            player1TableLayoutPanel.Location = new Point(28, 80);
+            player1TableLayoutPanel.Name = "player1TableLayoutPanel";
+            player1TableLayoutPanel.RowCount = 10;
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player1TableLayoutPanel.Size = new Size(306, 234);
+            player1TableLayoutPanel.TabIndex = 4;
             // 
-            // tableLayoutPanel2
+            // player2TableLayoutPanel
             // 
-            tableLayoutPanel2.BackColor = Color.White;
-            tableLayoutPanel2.ColumnCount = 10;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.ForeColor = Color.FromArgb(170, 56, 30);
-            tableLayoutPanel2.Location = new Point(451, 80);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 10;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel2.Size = new Size(310, 234);
-            tableLayoutPanel2.TabIndex = 5;
+            player2TableLayoutPanel.BackColor = Color.White;
+            player2TableLayoutPanel.ColumnCount = 10;
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.ForeColor = Color.FromArgb(170, 56, 30);
+            player2TableLayoutPanel.Location = new Point(451, 80);
+            player2TableLayoutPanel.Name = "player2TableLayoutPanel";
+            player2TableLayoutPanel.RowCount = 10;
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            player2TableLayoutPanel.Size = new Size(310, 234);
+            player2TableLayoutPanel.TabIndex = 5;
             // 
             // label3
             // 
@@ -297,12 +297,12 @@
             Controls.Add(pictureBox2);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(tableLayoutPanel2);
+            Controls.Add(player2TableLayoutPanel);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(player1ScoreLabel);
             Controls.Add(Player2);
             Controls.Add(P1sab);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(player1TableLayoutPanel);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -321,10 +321,10 @@
 
         private Button P1sab;
         private Button Player2;
-        private Label label1;
+        private Label player1ScoreLabel;
         private Label label2;
-        private TableLayoutPanel tableLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel player1TableLayoutPanel;
+        private TableLayoutPanel player2TableLayoutPanel;
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
