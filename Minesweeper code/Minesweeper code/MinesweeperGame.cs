@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Minesweeper_code
         private const int Columns = 5;
         private const int Mines = 5;
         private const int QuestionsInterval = 3;
-
+        const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb";
         private Button[,] player1Buttons = new Button[Rows, Columns];
         private Button[,] player2Buttons = new Button[Rows, Columns];
         private bool[,] player1IsMine = new bool[Rows, Columns];
@@ -29,27 +30,47 @@ namespace Minesweeper_code
         private int turnCounter = 0;
         private List<string> questions = new List<string>
                                     { "Is the British Army the only branch of the British Armed Forces?",
-                                      "Does the Royal Navy focus solely on submarine operations?",
-                                      "Is the Royal Air Force primarily responsible for ground-based operations?",
-                                      "Did the British military stay completely neutral during World War I?",
-                                      "Is the Prime Minister the operational commander of the British Armed Forces?",
-                                      "Does the British military exclusively engage in combat operations?",
-                                      "Is the Ministry of Defence solely responsible for domestic affairs?",
-                                      "Are members of the British military prohibited from participating in civilian rescue efforts?",
-                                      "Is the Gurkha Brigade an independent military force unrelated to the British Army?",
-                                      "Does the British military have no presence outside the United Kingdom?" };
+                                        "Does the Royal Navy focus solely on submarine operations?",
+                                        "Is the Royal Air Force primarily responsible for ground-based operations?",
+                                        "Did the British military stay completely neutral during World War I?",
+                                        "Is the Prime Minister the operational commander of the British Armed Forces?",
+                                        "Does the British military exclusively engage in combat operations?",
+                                        "Is the Ministry of Defence solely responsible for domestic affairs?",
+                                        "Are members of the British military prohibited from participating in civilian rescue efforts?",
+                                        "Is the Gurkha Brigade an independent military force unrelated to the British Army?",
+                                        "Does the British military have no presence outside the United Kingdom?",
+                                        "Is the Royal Navy a branch of the British Armed Forces?",
+                                        "Did the British military participate in the Falklands War in 1982?",
+                                        "Is the SAS (Special Air Service) a special forces unit in the British Army?",
+                                        "Does the Royal Air Force primarily handle maritime operations?",
+                                        "Did the British military have a significant role in the Gulf War in 1990-1991?",
+                                        "Is the Territorial Army now known as the Army Reserve?",
+                                        "Is the Queen's Guard responsible for ceremonial duties at Buckingham Palace?",
+                                        "Did the British military play a major role in the Battle of Normandy during World War II?",
+                                        "Is the Trident missile system a component of the UK's nuclear deterrent?",
+                                        "Does the British military engage in cyber warfare and intelligence operations?"};
         public List<string> Answers = new List<string>
         { 
-            "No"
-            "No"
-            "No"
-            "No"
-            "No"
-            "No"
-            "No"
-            "No"
-            "No" 
-            "No" 
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "No",
+                                        "Yes",
+                                        "Yes",
+                                        "Yes",
+                                        "No",
+                                        "Yes",
+                                        "Yes",
+                                        "Yes",
+                                        "Yes",
+                                        "Yes",
+                                        "Yes"
         };
         public string p1ID;
         public string p2ID;
@@ -133,7 +154,16 @@ namespace Minesweeper_code
                 if (player1IsMine[row, col])
                 {
                     MessageBox.Show("Player 1 hit a bomb! Game over for Player 1.");
-                    // Implement game-over logic for Player 1
+                    string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p1ID);
+                    int NewLosses = 1 + Convert.ToInt32(Losses);
+                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p1ID; 
+                    using (OleDbConnection connection = new OleDbConnection(provider))
+                    {
+                        using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
+                        {
+                            
+                        }
+                    }
                     return;
                 }
                 else
@@ -146,7 +176,8 @@ namespace Minesweeper_code
                 if (player2IsMine[row, col])
                 {
                     MessageBox.Show("Player 2 hit a bomb! Game over for Player 2.");
-                    // Implement game-over logic for Player 2
+                    string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p2ID);
+                    int NewLosses = 1 + Convert.ToInt32(Losses);
                     return;
                 }
                 else
