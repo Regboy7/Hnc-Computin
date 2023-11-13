@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin11\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {}
+    "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin13\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin11\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {
+    "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin13\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin11\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+        "projectUniqueName": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin13\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
         "projectName": "Minesweeper code",
-        "projectPath": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin11\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
+        "projectPath": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin13\\Minesweeper code\\Minesweeper code\\Minesweeper code.csproj",
         "packagesPath": "C:\\Users\\isaachain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin11\\Minesweeper code\\Minesweeper code\\obj\\",
+        "outputPath": "C:\\Users\\isaachain\\Source\\Repos\\Hnc-Computin13\\Minesweeper code\\Minesweeper code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
