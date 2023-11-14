@@ -41,12 +41,6 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
-            label5 = new Label();
-            label6 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -222,77 +216,12 @@
             pictureBox4.TabIndex = 11;
             pictureBox4.TabStop = false;
             // 
-            // label5
-            // 
-            label5.BackColor = Color.FromArgb(170, 56, 30);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(28, 531);
-            label5.Name = "label5";
-            label5.Size = new Size(306, 60);
-            label5.TabIndex = 12;
-            label5.Text = "label5";
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.FromArgb(170, 56, 30);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(451, 531);
-            label6.Name = "label6";
-            label6.Size = new Size(299, 60);
-            label6.TabIndex = 13;
-            label6.Text = "label6";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(170, 56, 30);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(83, 714);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 47);
-            button1.TabIndex = 14;
-            button1.Text = "button3";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(170, 56, 30);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(496, 714);
-            button2.Name = "button2";
-            button2.Size = new Size(179, 47);
-            button2.TabIndex = 15;
-            button2.Text = "button4";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(170, 56, 30);
-            textBox1.Location = new Point(134, 638);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.FromArgb(170, 56, 30);
-            textBox2.Location = new Point(551, 638);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 17;
-            // 
             // MinesweeperGame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(97, 94, 62);
-            ClientSize = new Size(802, 810);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            ClientSize = new Size(803, 475);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
             Controls.Add(player2ScoreLabel);
@@ -314,7 +243,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -331,12 +259,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
-        private Label label5;
-        private Label label6;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
     }
 
 

@@ -161,7 +161,7 @@ namespace Minesweeper_code
                     {
                         using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
                         {
-                            
+                            command.Parameters.AddWithValue("@Losses", NewLosses);
                         }
                     }
                     return;
@@ -178,6 +178,24 @@ namespace Minesweeper_code
                     MessageBox.Show("Player 2 hit a bomb! Game over for Player 2.");
                     string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p2ID);
                     int NewLosses = 1 + Convert.ToInt32(Losses);
+                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p2ID;
+                    using (OleDbConnection connection = new OleDbConnection(provider))
+                    {
+                        using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
+                        {
+                            command.Parameters.AddWithValue("@Losses", NewLosses);
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                Console.WriteLine("Data inserted.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("No rows affected.");
+                            }
+                        }
+                    }
                     return;
                 }
                 else

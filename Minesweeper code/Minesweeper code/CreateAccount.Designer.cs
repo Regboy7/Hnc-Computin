@@ -92,6 +92,7 @@
             textBox2.BackColor = Color.FromArgb(170, 56, 30);
             textBox2.Location = new Point(143, 53);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 2;
             // 
@@ -100,6 +101,7 @@
             textBox3.BackColor = Color.FromArgb(170, 56, 30);
             textBox3.Location = new Point(143, 89);
             textBox3.Name = "textBox3";
+            textBox3.PasswordChar = '*';
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 3;
             // 
