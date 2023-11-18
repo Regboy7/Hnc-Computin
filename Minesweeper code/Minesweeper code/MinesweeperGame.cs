@@ -222,11 +222,15 @@ namespace Minesweeper_code
             {
                 // Player 1's turn
                 ProcessPlayerTurn(row, col, player1IsMine, ref player1Score, player1TableLayoutPanel);
+                AskQuestion();
+                SwitchTurns();
             }
             else
             {
                 // Player 2's turn
                 ProcessPlayerTurn(row, col, player2IsMine, ref player2Score, player2TableLayoutPanel);
+                AskQuestion();
+                SwitchTurns();
             }
 
             turnCounter++;
@@ -250,7 +254,7 @@ namespace Minesweeper_code
         }
         private Button GetButtonFromCellData(CellData cellData, TableLayoutPanel table)
         {
-            foreach (Control ctrl in player1TableLayoutPanel.Controls)
+            foreach (Control ctrl in table.Controls)
             {
                 if (ctrl is Button button)
                 {
@@ -310,19 +314,19 @@ namespace Minesweeper_code
         }
         private string GetRandomQuestion(int ind)
         {
-
+            // Gets a random question from the question list
 
             return questions[ind];
         }
         private string Getanswer(int ind)
         {
-
-
+            // Gets the answer corresponding the the question in the question list
             return Answers[ind];
         }
 
         private int CountAdjacentMines(int row, int col)
         {
+            // Counts all of the mines that are around the players click
             int count = 0;
             bool[,] currentPlayerMines = (turnCounter % 2 == 0) ? player1IsMine : player2IsMine;
 
@@ -348,6 +352,7 @@ namespace Minesweeper_code
 
         public void GameEnd()
         {
+            // Closes the form the game is over
             this.Close();
         }
         
@@ -358,6 +363,7 @@ namespace Minesweeper_code
 
         private void MinesweeperGame_Load(object sender, EventArgs e)
         {
+            // Loads the player name 
             P1Name.Text = P1User;
             P2Name.Text = P2User;
         }
