@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Text;
@@ -18,8 +19,7 @@ namespace Minesweeper_code
     {
         private const int Rows = 10;
         private const int Columns = 10;
-        private const int Mines = 5;
-        private const int QuestionsInterval = 3;
+        private const int Mines = 15;
         const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = G:/Projects/MineScoreboard1.accdb";
         private Button[,] player1Buttons = new Button[Rows, Columns];
         private Button[,] player2Buttons = new Button[Rows, Columns];
@@ -27,7 +27,8 @@ namespace Minesweeper_code
         private bool[,] player2IsMine = new bool[Rows, Columns];
         private int player1Score = 0;
         private int player2Score = 0;
-        private int turnCounter = 0;
+        private int turnCounter = 2;
+        private int questionIndex = 1;
         private List<string> questions = new List<string>
                                     { "Is the British Army the only branch of the British Armed Forces?",
                                         "Does the Royal Navy focus solely on submarine operations?",
@@ -94,9 +95,10 @@ namespace Minesweeper_code
 
             foreach (Button button in buttons)
             {
-                button.Click += Button_Click;
+                EventHandler button_Click = Button_Click;
+                button.Click += button_Click;
             }
-            PutMines(Minehit);
+            PlaceMines(Minehit);
         }
         private void InitializeGrid(TableLayoutPanel tableLayoutPanel, Button[,] buttons)
         {
@@ -123,24 +125,25 @@ namespace Minesweeper_code
             }
         }
 
-        private void PutMines(bool[,] Minehit)
+        private void PlaceMines(bool[,] minehit)
         {
             Random random = new Random();
-            for (int i = 0; i > Mines; i++)
+            int minesPlaced = 0;
+
+            while (minesPlaced < Mines)
             {
-                int row, col;
-                do
+                int row = random.Next(0, Rows);
+                int col = random.Next(0, Columns);
+
+                if (!minehit[row, col])
                 {
-                    row = random.Next(0, Rows);
-                    col = random.Next(0, Columns);
-                }
-                while (Minehit[row, col]);
-                {
-                    Minehit[row, col] = true;
+                    minehit[row, col] = true;
+                    minesPlaced++;
                 }
             }
         }
-        private void Button_Click(object sender, EventArgs e)
+
+        /*private void Button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             CellData cellData = (CellData)button.Tag;
@@ -154,20 +157,24 @@ namespace Minesweeper_code
                     MessageBox.Show("Player 1 hit a bomb! Game over for Player 1.");
                     string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p1ID);
                     int NewLosses = 1 + Convert.ToInt32(Losses);
-                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p1ID;
+                    string insertionquery = $"UPDATE Scoreboard SET losses = losses + 1 WHERE UID = '{p1ID}'";
                     using (OleDbConnection connection = new OleDbConnection(provider))
                     {
                         using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
                         {
+                            connection.Open();
                             command.Parameters.AddWithValue("@Losses", NewLosses);
                         }
                     }
+                    GameEnd();
+
                 }
                 else
                 {
                     int adjacentMines = CountAdjacentMines(row, col);
                     button.Text = adjacentMines.ToString();
                     player1Score++;
+
                 }
             }
             else
@@ -177,41 +184,85 @@ namespace Minesweeper_code
                     MessageBox.Show("Player 2 hit a bomb! Game over for Player 2.");
                     string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p2ID);
                     int NewLosses = 1 + Convert.ToInt32(Losses);
-                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p2ID;
+                    string insertionquery = $"UPDATE Scoreboard SET losses = losses + 1 WHERE UID = '{p2ID}'";
                     using (OleDbConnection connection = new OleDbConnection(provider))
                     {
                         using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
                         {
+                            connection.Open();
                             command.Parameters.AddWithValue("@Losses", NewLosses);
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                Console.WriteLine("Data inserted.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("No rows affected.");
-                            }
+                            command.ExecuteNonQuery();
                         }
                     }
+                    GameEnd();
                 }
                 else
                 {
+
                     int adjacentMines = CountAdjacentMines(row, col);
                     button.Text = adjacentMines.ToString();
                     player2Score++;
+
                 }
             }
-            if (turnCounter % QuestionsInterval == 0)
-            {
-                AskQuestion();
-            }
+
+
             turnCounter++;
             SwitchTurns();
             DisplayPlayerScores();
-        }
+        }*/
+        private void Button_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            CellData cellData = (CellData)button.Tag;
+            int row = cellData.Row;
+            int col = cellData.Column;
 
+            if (turnCounter % 2 == 0)
+            {
+                // Player 1's turn
+                ProcessPlayerTurn(row, col, player1IsMine, ref player1Score, player1TableLayoutPanel);
+            }
+            else
+            {
+                // Player 2's turn
+                ProcessPlayerTurn(row, col, player2IsMine, ref player2Score, player2TableLayoutPanel);
+            }
+
+            turnCounter++;
+            DisplayPlayerScores();
+        }
+        private void ProcessPlayerTurn(int row, int col, bool[,] playerMines, ref int playerScore, TableLayoutPanel tabl)
+        {
+            if (playerMines[row, col])
+            {
+                MessageBox.Show($"Player {((turnCounter % 2 == 0) ? 1 : 2)} hit a bomb! Game over for Player {((turnCounter % 2 == 0) ? 1 : 2)}.");
+                GameEnd();
+            }
+            else
+            {
+                int adjacentMines = CountAdjacentMines(row, col);
+                CellData cell = new CellData(row, col);
+                Button clickedButton = GetButtonFromCellData(cell, tabl);
+                clickedButton.Text = adjacentMines.ToString();
+                playerScore++;
+            }
+        }
+        private Button GetButtonFromCellData(CellData cellData, TableLayoutPanel table)
+        {
+            foreach (Control ctrl in player1TableLayoutPanel.Controls)
+            {
+                if (ctrl is Button button)
+                {
+                    CellData data = (CellData)button.Tag;
+                    if (data != null && data.Row == cellData.Row && data.Column == cellData.Column)
+                    {
+                        return button;
+                    }
+                }
+            }
+            return null; // Return null if the button is not found for the given CellData
+        }
 
         private void AskQuestion()
         {
@@ -221,7 +272,7 @@ namespace Minesweeper_code
             string question = GetRandomQuestion(index1);
             string answer = Getanswer(index1);
             DialogResult result = MessageBox.Show(question, "Question", MessageBoxButtons.YesNo);
-            if (result == DialogResult)
+            if (result.ToString() == answer)
             {
                 if (turnCounter % 2 == 0)
                 {
@@ -232,7 +283,6 @@ namespace Minesweeper_code
                     player2Score++;
                 }
             }
-            turnCounter++;
         }
         private void DisplayPlayerScores()
         {
@@ -295,6 +345,12 @@ namespace Minesweeper_code
 
             return count;
         }
+
+        public void GameEnd()
+        {
+            this.Close();
+        }
+        
         public void button1_Click(object sender, EventArgs e)
         {
             ///
@@ -306,11 +362,12 @@ namespace Minesweeper_code
             P2Name.Text = P2User;
         }
 
+
     }
 
-
-
 }
+
+
 
 class CellData
 {

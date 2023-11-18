@@ -198,6 +198,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(97, 94, 62);
             ClientSize = new Size(1082, 634);
+            Controls.Add(player1TableLayoutPanel);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
             Controls.Add(player2ScoreLabel);
@@ -205,7 +206,6 @@
             Controls.Add(player2TableLayoutPanel);
             Controls.Add(P2Name);
             Controls.Add(P1Name);
-            Controls.Add(player1TableLayoutPanel);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
