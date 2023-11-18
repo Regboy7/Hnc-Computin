@@ -19,7 +19,7 @@ namespace Minesweeper_code
 
         private void button2_Click(object sender, EventArgs e)
         {
-            const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb";
+            const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = G:/Projects/MineScoreboard1.accdb";
             // database
             List<string> retrievedP1PasswordResults = new List<string>();
             string CheckP1HashPass = Hasher.Hash(textBox2.Text, 15);
@@ -61,7 +61,7 @@ namespace Minesweeper_code
             if (retrievedP2PasswordResults.Contains(CheckP2HashPass) && retrievedP1PasswordResults.Contains(CheckP1HashPass))
             {
                 MessageBox.Show("Game Started.");
-                this.Hide();
+                this.Hide(); 
             MinesweeperGame newform = new MinesweeperGame(Convert.ToInt32(P1UID[0]), Convert.ToInt32(P2UID[0]));
                 newform.ShowDialog();
                 this.Show();

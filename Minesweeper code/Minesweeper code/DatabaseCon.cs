@@ -10,7 +10,7 @@ namespace Minesweeper_code
 {
     static class DatabaseCon
     {
-        const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb";
+        const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = G:/Projects/MineScoreboard1.accdb";
         public static List<string> Datalist(string req, string DB, string req2, string req3)
         {
             using (OleDbConnection dbCon = new OleDbConnection(provider))

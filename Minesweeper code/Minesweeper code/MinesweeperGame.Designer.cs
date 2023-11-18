@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinesweeperGame));
-            P1sab = new Button();
-            Player2 = new Button();
             P1Name = new Label();
             P2Name = new Label();
             player1TableLayoutPanel = new TableLayoutPanel();
@@ -46,28 +44,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // P1sab
-            // 
-            P1sab.BackColor = Color.FromArgb(170, 56, 30);
-            P1sab.ForeColor = SystemColors.ButtonHighlight;
-            P1sab.Location = new Point(113, 381);
-            P1sab.Name = "P1sab";
-            P1sab.Size = new Size(121, 57);
-            P1sab.TabIndex = 0;
-            P1sab.Text = "Player 1 Sabotage";
-            P1sab.UseVisualStyleBackColor = false;
-            // 
-            // Player2
-            // 
-            Player2.BackColor = Color.FromArgb(170, 56, 30);
-            Player2.ForeColor = SystemColors.ButtonHighlight;
-            Player2.Location = new Point(551, 381);
-            Player2.Name = "Player2";
-            Player2.Size = new Size(124, 57);
-            Player2.TabIndex = 1;
-            Player2.Text = "Player 2 Sabotage";
-            Player2.UseVisualStyleBackColor = false;
             // 
             // P1Name
             // 
@@ -86,7 +62,7 @@
             P2Name.BackColor = Color.FromArgb(170, 56, 30);
             P2Name.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             P2Name.ForeColor = SystemColors.ButtonHighlight;
-            P2Name.Location = new Point(451, 25);
+            P2Name.Location = new Point(578, 25);
             P2Name.MaximumSize = new Size(1000, 1000);
             P2Name.Name = "P2Name";
             P2Name.Size = new Size(74, 37);
@@ -108,7 +84,7 @@
             player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             player1TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             player1TableLayoutPanel.ForeColor = Color.FromArgb(170, 56, 30);
-            player1TableLayoutPanel.Location = new Point(28, 80);
+            player1TableLayoutPanel.Location = new Point(12, 80);
             player1TableLayoutPanel.Name = "player1TableLayoutPanel";
             player1TableLayoutPanel.RowCount = 10;
             player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -121,7 +97,7 @@
             player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             player1TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            player1TableLayoutPanel.Size = new Size(306, 234);
+            player1TableLayoutPanel.Size = new Size(475, 434);
             player1TableLayoutPanel.TabIndex = 4;
             // 
             // player2TableLayoutPanel
@@ -139,7 +115,7 @@
             player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             player2TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             player2TableLayoutPanel.ForeColor = Color.FromArgb(170, 56, 30);
-            player2TableLayoutPanel.Location = new Point(451, 80);
+            player2TableLayoutPanel.Location = new Point(578, 80);
             player2TableLayoutPanel.Name = "player2TableLayoutPanel";
             player2TableLayoutPanel.RowCount = 10;
             player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -152,14 +128,14 @@
             player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             player2TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            player2TableLayoutPanel.Size = new Size(310, 234);
+            player2TableLayoutPanel.Size = new Size(492, 434);
             player2TableLayoutPanel.TabIndex = 5;
             // 
             // player1ScoreLabel
             // 
             player1ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
             player1ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
-            player1ScoreLabel.Location = new Point(28, 335);
+            player1ScoreLabel.Location = new Point(12, 548);
             player1ScoreLabel.Name = "player1ScoreLabel";
             player1ScoreLabel.Size = new Size(220, 32);
             player1ScoreLabel.TabIndex = 6;
@@ -169,7 +145,7 @@
             // 
             player2ScoreLabel.BackColor = Color.FromArgb(170, 56, 30);
             player2ScoreLabel.ForeColor = SystemColors.ButtonHighlight;
-            player2ScoreLabel.Location = new Point(451, 335);
+            player2ScoreLabel.Location = new Point(589, 548);
             player2ScoreLabel.Name = "player2ScoreLabel";
             player2ScoreLabel.Size = new Size(235, 32);
             player2ScoreLabel.TabIndex = 7;
@@ -179,7 +155,7 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(297, 28);
+            pictureBox1.Location = new Point(450, 28);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(37, 34);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -189,7 +165,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(297, 28);
+            pictureBox2.Location = new Point(450, 28);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(37, 34);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -199,7 +175,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(713, 28);
+            pictureBox3.Location = new Point(1033, 28);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(37, 34);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -209,7 +185,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(713, 28);
+            pictureBox4.Location = new Point(1033, 28);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(37, 34);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -221,7 +197,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(97, 94, 62);
-            ClientSize = new Size(803, 475);
+            ClientSize = new Size(1082, 634);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
             Controls.Add(player2ScoreLabel);
@@ -229,8 +205,6 @@
             Controls.Add(player2TableLayoutPanel);
             Controls.Add(P2Name);
             Controls.Add(P1Name);
-            Controls.Add(Player2);
-            Controls.Add(P1sab);
             Controls.Add(player1TableLayoutPanel);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
@@ -246,9 +220,6 @@
         }
 
         #endregion
-
-        private Button P1sab;
-        private Button Player2;
         private Label P1Name;
         private Label P2Name;
         private TableLayoutPanel player1TableLayoutPanel;

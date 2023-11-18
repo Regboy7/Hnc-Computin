@@ -16,11 +16,11 @@ namespace Minesweeper_code
 {
     public partial class MinesweeperGame : Form
     {
-        private const int Rows = 5;
-        private const int Columns = 5;
+        private const int Rows = 10;
+        private const int Columns = 10;
         private const int Mines = 5;
         private const int QuestionsInterval = 3;
-        const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb";
+        const string provider = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = G:/Projects/MineScoreboard1.accdb";
         private Button[,] player1Buttons = new Button[Rows, Columns];
         private Button[,] player2Buttons = new Button[Rows, Columns];
         private bool[,] player1IsMine = new bool[Rows, Columns];
@@ -49,8 +49,8 @@ namespace Minesweeper_code
                                         "Did the British military play a major role in the Battle of Normandy during World War II?",
                                         "Is the Trident missile system a component of the UK's nuclear deterrent?",
                                         "Does the British military engage in cyber warfare and intelligence operations?"};
-        public List<string> Answers = new List<string>
-        { 
+        private List<string> Answers = new List<string>
+        {
                                         "No",
                                         "No",
                                         "No",
@@ -110,6 +110,7 @@ namespace Minesweeper_code
                 tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / Rows));
                 for (int col = 0; col < Columns; col++)
                 {
+                    tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / Columns));
                     buttons[row, col] = new Button
                     {
                         Name = $"button_{row}_{col}",
@@ -145,18 +146,15 @@ namespace Minesweeper_code
             CellData cellData = (CellData)button.Tag;
             int row = cellData.Row;
             int col = cellData.Column;
-            if (turnCounter % QuestionsInterval == 0)
-            {
-                AskQuestion();
-            }
             if (turnCounter % 2 == 0)
             {
                 if (player1IsMine[row, col])
                 {
+                    button.Text = "X"; // Display "X" for mine
                     MessageBox.Show("Player 1 hit a bomb! Game over for Player 1.");
                     string Losses = DatabaseCon.Datalist("Losses", "Scoreboard", p1ID);
                     int NewLosses = 1 + Convert.ToInt32(Losses);
-                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p1ID; 
+                    string insertionquery = "INSERT INTO Losses WHERE UID =" + p1ID;
                     using (OleDbConnection connection = new OleDbConnection(provider))
                     {
                         using (OleDbCommand command = new OleDbCommand(insertionquery, connection))
@@ -164,10 +162,11 @@ namespace Minesweeper_code
                             command.Parameters.AddWithValue("@Losses", NewLosses);
                         }
                     }
-                    return;
                 }
                 else
                 {
+                    int adjacentMines = CountAdjacentMines(row, col);
+                    button.Text = adjacentMines.ToString();
                     player1Score++;
                 }
             }
@@ -196,12 +195,17 @@ namespace Minesweeper_code
                             }
                         }
                     }
-                    return;
                 }
                 else
                 {
+                    int adjacentMines = CountAdjacentMines(row, col);
+                    button.Text = adjacentMines.ToString();
                     player2Score++;
                 }
+            }
+            if (turnCounter % QuestionsInterval == 0)
+            {
+                AskQuestion();
             }
             turnCounter++;
             SwitchTurns();
@@ -212,11 +216,12 @@ namespace Minesweeper_code
         private void AskQuestion()
         {
             // Display a random question from the array
-            string question = GetRandomQuestionAndAnswer();
+            Random random = new Random();
+            int index1 = random.Next(questions.Count);
+            string question = GetRandomQuestion(index1);
+            string answer = Getanswer(index1);
             DialogResult result = MessageBox.Show(question, "Question", MessageBoxButtons.YesNo);
-
-            // If the answer is correct, give the player an extra turn
-            if (result == DialogResult.Yes)
+            if (result == DialogResult)
             {
                 if (turnCounter % 2 == 0)
                 {
@@ -226,15 +231,13 @@ namespace Minesweeper_code
                 {
                     player2Score++;
                 }
-
-                // Update turn counter to account for the extra turn
-                turnCounter++;
             }
+            turnCounter++;
         }
         private void DisplayPlayerScores()
         {
             // Display player scores in the UI
-            P1Name.Text = $"Player 1 Score: {player1Score}";
+            player1ScoreLabel.Text = $"Player 1 Score: {player1Score}";
             player2ScoreLabel.Text = $"Player 2 Score: {player2Score}";
         }
         private void SwitchTurns()
@@ -244,20 +247,28 @@ namespace Minesweeper_code
             {
                 player1TableLayoutPanel.Enabled = true;
                 player2TableLayoutPanel.Enabled = false;
+                pictureBox1.BringToFront();
+                pictureBox4.BringToFront();
             }
             else
             {
                 player1TableLayoutPanel.Enabled = false;
                 player2TableLayoutPanel.Enabled = true;
+                pictureBox3.BringToFront();
+                pictureBox2.BringToFront();
             }
         }
-        private string GetRandomQuestionAndAnswer()
+        private string GetRandomQuestion(int ind)
         {
-            Random random = new Random();
-            int index1 = random.Next(questions.Count);
 
-            return questions[index1];
-            return Answers[index1];
+
+            return questions[ind];
+        }
+        private string Getanswer(int ind)
+        {
+
+
+            return Answers[ind];
         }
 
         private int CountAdjacentMines(int row, int col)
@@ -293,8 +304,6 @@ namespace Minesweeper_code
         {
             P1Name.Text = P1User;
             P2Name.Text = P2User;
-            player1ScoreLabel.Text = P1User + "has cleared 0 tiles";
-            player2ScoreLabel.Text = P2User + "has cleared 0 tiles";
         }
 
     }

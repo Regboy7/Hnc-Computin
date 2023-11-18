@@ -19,21 +19,24 @@ namespace Minesweeper_code
             InitializeComponent();
         }
 
-
+        private bool HasSpecialChars(string TheString)
+        {
+            return TheString.Any(ch => !char.IsLetterOrDigit(ch));
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
 
             List<string> UsernamesExisting = new List<string>();
-            OleDbConnection Con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = M:/Projects/MineScoreboard1.accdb");
+            OleDbConnection Con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = G:/Projects/MineScoreboard1.accdb");
 
             Con.Open();
             UsernamesExisting = DatabaseCon.Datalist("Username", "Scoreboard");
-            if (Regex.IsMatch(textBox1.Text, @"^.\?\,\'\;\:\!\-]+$"))
+            if (HasSpecialChars(textBox1.Text))
             {
                 MessageBox.Show("Special characters are not allowed");
                 return;
             }
-            if (Regex.IsMatch(textBox2.Text, @"^.\?\,\'\;\:\!\-]+$"))
+            if (HasSpecialChars(textBox1.Text))
             {
                 MessageBox.Show("Special characters are not allowed");
                 return;
